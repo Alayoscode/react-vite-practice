@@ -1,30 +1,26 @@
-import { Route, Routes, useLocation } from "react-router-dom"
-import Login from "./pages/login"
-import Home from "./pages/home"
-import Contact from "./pages/contact"
-import Header from "./components/header"
-
-
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./pages/home";
+import Login from "./pages/login";
+import Signup from "./pages/signup";
+import Header from "./components/header";
 
 function App() {
-
-  const location = useLocation()
-
-  console.log(location.pathname);
-  
-
+  const location = useLocation();
+  const hideHeader = location.pathname === "/login" || location.pathname === "/signup";
 
   return (
-    <>   
-     {location.pathname !== "/" && <Header/>}
-    <Routes>
-      <Route path= "/" element={<Login/>}/>
-      <Route path="/home" element={<Home/>}/>
-      <Route path="/contact" element={<Contact/>}/>
-    </Routes>
-    </>
-
-  )
+    <div className="min-h-screen bg-gray-100">
+      {!hideHeader && <Header />}
+      <main className={ !hideHeader ? "pt-20" : "" }>
+        <div className="h-20"></div> {/* 16px extra space */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;

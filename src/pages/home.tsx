@@ -1,10 +1,15 @@
+import Products from "../components/Products";
+
 
 const Home = () => {
   return (
-      <div>
-        <h1>home</h1>
-      </div>
-  )
-}
+    <div className="pt-24 px-6">
+      
+      <Products />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
+
+

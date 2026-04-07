@@ -6,7 +6,7 @@
   box-sizing:   border-box;
 }
 
-body{
+/* body{
   max-width: 90%;
   padding: 0%;
   margin: 0 auto;
@@ -15,5 +15,5 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
+} */
 
