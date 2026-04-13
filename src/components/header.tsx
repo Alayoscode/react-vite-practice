@@ -74,7 +74,7 @@ const Header = () => {
 
       {/* MOBILE MENU (separate from header) */}
       {mobileMenuOpen && (
-        <div className="fixed top-16 left-0 w-full z-40 md:hidden bg-white border-t border-gray-200 shadow-lg">
+        <div className="fixed top-16 left-0 max-w-7xl mx-auto z-40 md:hidden bg-white border-t border-gray-200 shadow-lg">
           <div className="px-4 py-3 flex flex-col gap-2">
             <input
               type="text"

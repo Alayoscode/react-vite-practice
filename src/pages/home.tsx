@@ -1,11 +1,14 @@
 import Products from "../components/Products";
+import Login from "./login";
 
 
 const Home = () => {
   return (
-    <div className="pt-24 px-6">
+    <div className="bg-gray-200 px-4 sm:px-6 lg:px-8 py-6">
       
       <Products />
+      
+      
     </div>
   );
 };
