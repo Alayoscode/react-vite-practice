@@ -1,6 +1,7 @@
 import { ShoppingCart, Search, Menu } from "lucide-react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ const Header = () => {
                 />
                 {/* Search icon */}
                 {search === "" && (
-                  <Search className="absolute left-36 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                  <Search className="absolute right-5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                 )}
                 
               </div>
@@ -40,11 +41,21 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-4 text-sm font-medium text-gray-700">
-              <a className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition">Fruits</a>
-              <a className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition">Vegetables</a>
-              <a className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition">Dairy</a>
-              <a className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition">Snacks</a>
-
+              <Link to="/fruits" className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition cursor-pointer">
+                Fruits
+              </Link>
+              <Link to="/vegetables" className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition cursor-pointer">
+                Vegetables
+              </Link>
+              <Link to="/dairy" className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition cursor-pointer">
+                Dairy
+              </Link>
+              <Link to="/snacks" className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition cursor-pointer">
+                Snacks
+              </Link>
+              <Link to="/frozen-foods" className="rounded-full px-3 py-1 hover:bg-green-50 hover:text-green-600 transition cursor-pointer">
+                Frozen Foods
+              </Link>
               <Link
                 to="/signup"
                 className="ml-4 px-4 w-30 py-1.5 bg-green-600 text-white rounded-full text-sm font-medium hover:bg-green-700 transition flex justify-center"
@@ -82,10 +93,10 @@ const Header = () => {
               className="w-full rounded-full border border-gray-200 py-2 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
             />
 
-            <a className="px-3 py-2 rounded hover:bg-green-50 hover:text-green-600">Fruits</a>
-            <a className="px-3 py-2 rounded hover:bg-green-50 hover:text-green-600">Vegetables</a>
-            <a className="px-3 py-2 rounded hover:bg-green-50 hover:text-green-600">Dairy</a>
-            <a className="px-3 py-2 rounded hover:bg-green-50 hover:text-green-600">Snacks</a>
+            <a className="px-3 py-2 rounded hover:bg-green-50 hover:text-green-600 cursor-pointer">Fruits</a>
+            <a className="px-3 py-2 rounded hover:bg-green-50 hover:text-green-600 cursor-pointer">Vegetables</a>
+            <a className="px-3 py-2 rounded hover:bg-green-50 hover:text-green-600 cursor-pointer">Dairy</a>
+            <a className="px-3 py-2 rounded hover:bg-green-50 hover:text-green-600 cursor-pointer">Snacks</a>
 
             <Link
               to="/signup"

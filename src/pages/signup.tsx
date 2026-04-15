@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Signup = () => {
   return (
-    <div className='flex justify-center px-4 py-10'>
-      <div className="w-full max-w-[500px] bg-green-900 border-0  rounded-2xl flex align-middle justify-center items-center flex-col gap-5"  >
+    <div className='flex justify-center px-4 py-10 align-middle items-center h-screen w-full' >
+      <div className="w-full max-w-[500px] bg-green-900 border-0  rounded-2xl flex align-middle justify-center items-center flex-col gap-5 pb-12 pt-8"  >
     
      <h1 className="font-bold text-[35px]">Sign Up</h1>
       

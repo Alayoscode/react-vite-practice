@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Header from "./components/header";
+import Category from "./pages/category";
 function App() {
   const location = useLocation();
   const hideHeader = location.pathname === "/login" || location.pathname === "/signup";
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/category/:name" element={<Category />} />
         </Routes>
       </main>
     </div>
